@@ -1,9 +1,12 @@
 public class HitPoint {
     protected static final int MIN = 0;
     protected static final int MAX = 99;
+    // インスタンス変数は immutable にする
     final int value;
 
-    public HitPoint(int value) {
+    // 引数も immutable にする
+    public HitPoint(final int value) {
+        // ガード節
         if (value < MIN) throw new IllegalArgumentException("specify over " + MIN);
         if (MAX < value) throw new IllegalArgumentException("specify under " + MAX);
 
@@ -13,6 +16,7 @@ public class HitPoint {
     HitPoint damage(final int damageAmount) {
         final int damaged = value - damageAmount;
         final int corrected = Math.max(damaged, MIN);
+        // 変更値を持ったクラスを新たに生成する
         return new HitPoint(corrected);
     }
 

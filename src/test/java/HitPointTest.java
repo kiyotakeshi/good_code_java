@@ -6,7 +6,7 @@ public class HitPointTest {
 
     @Test
     void hp() {
-        HitPoint hp = new HitPoint(30);
+        var hp = new HitPoint(30);
         HitPoint damagedHp = hp.damage(15);
         assertThat(damagedHp.getValue()).isEqualTo(15);
 
@@ -17,7 +17,7 @@ public class HitPointTest {
     @Test
     void min() {
         assertThatThrownBy(() -> {
-            HitPoint hp = new HitPoint(-1);
+            new HitPoint(-1);
         }).isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("specify over " + HitPoint.MIN);
     }
@@ -25,7 +25,7 @@ public class HitPointTest {
     @Test
     void max() {
         assertThatThrownBy(() -> {
-            HitPoint hp = new HitPoint(10000);
+            new HitPoint(10000);
         }).isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("specify under " + HitPoint.MAX);
     }
