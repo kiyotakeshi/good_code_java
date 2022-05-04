@@ -1,12 +1,12 @@
 package valueObject;
 
 import org.junit.jupiter.api.Test;
-import valueObject.Money;
 
 import java.util.Currency;
 import java.util.Locale;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class MoneyTest {
 

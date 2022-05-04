@@ -1,9 +1,6 @@
 package strategy;
 
 import org.junit.jupiter.api.Test;
-import strategy.MagicSwitch;
-import strategy.MagicType;
-import strategy.Member;
 
 public class MagicSwitchTest {
 

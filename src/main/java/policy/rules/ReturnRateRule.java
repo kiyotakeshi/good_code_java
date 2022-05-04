@@ -1,7 +1,6 @@
 package policy.rules;
 
 import policy.PurchaseHistory;
-import policy.rules.ExcellentCustomerRule;
 
 public class ReturnRateRule implements ExcellentCustomerRule {
 

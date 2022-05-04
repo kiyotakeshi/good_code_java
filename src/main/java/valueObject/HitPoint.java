@@ -1,8 +1,8 @@
 package valueObject;
 
 public class HitPoint {
-    protected static final int MIN = 0;
-    protected static final int MAX = 99;
+    static final int MIN = 0;
+    static final int MAX = 99;
     // インスタンス変数は immutable にする
     final int value;
 

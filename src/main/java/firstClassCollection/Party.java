@@ -25,7 +25,7 @@ public class Party {
         return new Party(newMembers);
     }
 
-    protected boolean isFull() {
+    boolean isFull() {
         return members.size() == MAX_MEMBER_COUNT;
     }
 
