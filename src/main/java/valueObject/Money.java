@@ -1,3 +1,5 @@
+package valueObject;
+
 import java.util.Currency;
 
 // value object

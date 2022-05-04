@@ -1,3 +1,5 @@
+package factory;
+
 public class ConsumptionPoint {
     public final int value;
 

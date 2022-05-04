@@ -1,3 +1,6 @@
+package valueObject;
+
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
@@ -8,10 +11,10 @@ public class HitPointTest {
     void hp() {
         var hp = new HitPoint(30);
         HitPoint damagedHp = hp.damage(15);
-        assertThat(damagedHp.getValue()).isEqualTo(15);
+        Assertions.assertThat(damagedHp.getValue()).isEqualTo(15);
 
         HitPoint recoveredHp = damagedHp.recover(10000);
-        assertThat(recoveredHp.getValue()).isEqualTo(HitPoint.MAX);
+        Assertions.assertThat(recoveredHp.getValue()).isEqualTo(HitPoint.MAX);
     }
 
     @Test

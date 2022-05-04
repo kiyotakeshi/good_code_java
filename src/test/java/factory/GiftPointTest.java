@@ -1,3 +1,7 @@
+package factory;
+
+import factory.ConsumptionPoint;
+import factory.GiftPoint;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -1,3 +1,5 @@
+package factory;
+
 public class GiftPoint {
     private static final int MIN_POINT = 0;
     private static final int STANDARD_MEMBER_POINT = 3000;
@@ -41,7 +43,7 @@ public class GiftPoint {
 
     @Override
     public String toString() {
-        return "GiftPoint{" +
+        return "factory.GiftPoint{" +
                 "value=" + value +
                 '}';
     }

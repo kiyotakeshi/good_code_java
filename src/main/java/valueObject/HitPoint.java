@@ -1,3 +1,5 @@
+package valueObject;
+
 public class HitPoint {
     protected static final int MIN = 0;
     protected static final int MAX = 99;
@@ -32,7 +34,7 @@ public class HitPoint {
 
     @Override
     public String toString() {
-        return "HitPoint{" +
+        return "valueObject.HitPoint{" +
                 "value=" + value +
                 '}';
     }

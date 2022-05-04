@@ -1,3 +1,5 @@
+package earyReturn;
+
 public class Member {
     public int hitPoint;
     public int maxHitPoint;
