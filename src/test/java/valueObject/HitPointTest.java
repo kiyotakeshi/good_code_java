@@ -1,20 +1,20 @@
 package valueObject;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class HitPointTest {
 
     @Test
     void hp() {
-        var hp = new HitPoint(30);
-        HitPoint damagedHp = hp.damage(15);
-        Assertions.assertThat(damagedHp.getValue()).isEqualTo(15);
+        var sut = new HitPoint(30);
+        HitPoint damagedHp = sut.damage(15);
+        assertThat(damagedHp.getValue()).isEqualTo(15);
 
         HitPoint recoveredHp = damagedHp.recover(10000);
-        Assertions.assertThat(recoveredHp.getValue()).isEqualTo(HitPoint.MAX);
+        assertThat(recoveredHp.getValue()).isEqualTo(HitPoint.MAX);
     }
 
     @Test

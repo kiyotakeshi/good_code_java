@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class PartyTest {
 
-    private Party party;
+    private Party sut;
 
     @BeforeEach
     void setUp() {
@@ -24,15 +24,15 @@ public class PartyTest {
                 member2,
                 member3
         );
-        party = new Party(members);
+        sut = new Party(members);
     }
 
     @Test
     void isFull() {
-        assertThat(party.isFull()).isFalse();
+        assertThat(sut.isFull()).isFalse();
 
         var member4 = new Member(4);
-        Party addedParty = party.add(member4);
+        Party addedParty = sut.add(member4);
         System.out.println(addedParty);
 
         assertThat(addedParty.isFull()).isTrue();
@@ -49,7 +49,7 @@ public class PartyTest {
         var member3 = new Member(3);
 
         assertThatThrownBy(() -> {
-            party.add(member3);
+            sut.add(member3);
         }).isInstanceOf(RuntimeException.class)
                 .hasMessageContaining("already party in");
     }

@@ -13,8 +13,8 @@ public class MoneyTest {
     @Test
     void money() {
         Currency jp = Currency.getInstance(Locale.JAPAN);
-        var money = new Money(100, jp);
-        assertThat(money.getAmount()).isEqualTo(100);
+        var sut = new Money(100, jp);
+        assertThat(sut.getAmount()).isEqualTo(100);
     }
 
     @Test
